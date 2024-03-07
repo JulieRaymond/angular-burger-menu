@@ -1,0 +1,67 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-size: 25px;
+}
+
+.logo img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+}
+
+/* masque le menu burger */
+.burger-menu-btn {
+    display: none;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 1rem;
+}
+
+/* look de mon burger  */
+.burger-menu-btn span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 0.4rem;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.links a {
+    color: black;
+    text-decoration: none;
+    padding: 0 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .links {
+        display: none;
+        /* masque les liens sur les petits écrans */
+        flex-direction: column;
+        position: absolute;
+        top: 6rem;
+        /* ajuste à partir du haut de l'écran */
+        left: 0;
+        width: 100%;
+        background-color: white;
+    }
+
+    /* affiche les liens lorsque le menu est ouvert */
+    .links.show {
+        display: flex;
+        //margin-top: 4rem;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .burger-menu-btn {
+        display: block;
+    }
+}
